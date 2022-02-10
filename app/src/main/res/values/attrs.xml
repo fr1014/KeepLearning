@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomImageView">
+        <attr name="top_left" format="boolean"/>
+        <attr name="top_right" format="boolean"/>
+        <attr name="bottom_left" format="boolean"/>
+        <attr name="bottom_right" format="boolean"/>
+        <attr name="radius" format="dimension"/>
+    </declare-styleable>
+</resources>
