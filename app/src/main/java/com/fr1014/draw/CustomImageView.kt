@@ -9,7 +9,7 @@ import com.fr1014.keeplearning.R
 /**
  * Time: 2022/2/9
  * Author: fanrui07
- * Description:
+ * Description: 自定义ImageView，支持添加边框和设置圆角
  */
 class CustomImageView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
