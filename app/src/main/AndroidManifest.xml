@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KeepLearning">
-        <activity android:name="com.fr1014.draw.DrawActivity"></activity>
+        <activity android:name="com.fr1014.CoroutineActivity"></activity>
+        <activity android:name="com.fr1014.event.EventActivity" />
+        <activity android:name="com.fr1014.draw.DrawActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
