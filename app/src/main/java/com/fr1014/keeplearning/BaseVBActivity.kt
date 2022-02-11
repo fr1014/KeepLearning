@@ -1,7 +1,7 @@
 package com.fr1014.keeplearning
 
 import android.os.Bundle
-import android.os.PersistableBundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 
@@ -17,6 +17,8 @@ abstract class BaseVBActivity<VB : ViewBinding> : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = getViewBinding()
         setContentView(binding.root)
+
+        Toast.makeText(this, javaClass.simpleName, Toast.LENGTH_SHORT).show() //弹出当前的Activity名
     }
 
     abstract fun getViewBinding(): VB
