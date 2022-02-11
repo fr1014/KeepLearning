@@ -72,7 +72,7 @@ class CustomImageView @JvmOverloads constructor(
     }
 
     override fun onDraw(canvas: Canvas?) {
-        val sc = canvas?.saveLayer(mBoundsF, null, Canvas.ALL_SAVE_FLAG) ?: 0
+        val sc = canvas?.saveLayer(mBoundsF, null) ?: 0
         //---------------图片圆角------------------//
         mBoundsF?.let {
             boundsPath.addRoundRect(it, radii, Path.Direction.CW)
@@ -81,7 +81,7 @@ class CustomImageView @JvmOverloads constructor(
         //---------------图片圆角------------------//
 
         //保存遮罩+view的背景
-        canvas?.saveLayer(mBoundsF, boundsPaint, Canvas.ALL_SAVE_FLAG);
+        canvas?.saveLayer(mBoundsF, boundsPaint);
         super.onDraw(canvas)
         //恢复
         canvas?.restoreToCount(sc);
