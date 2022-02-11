@@ -31,4 +31,28 @@
             android:background="@color/ffd600"
             android:text="事件分发" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/tv_coroutine"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/ffab00"
+            android:text="协程(Coroutine)" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/ffd600"
+            android:text="" />
+    </LinearLayout>
 </LinearLayout>
