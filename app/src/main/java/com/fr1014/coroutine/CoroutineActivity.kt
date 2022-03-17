@@ -22,32 +22,31 @@ class CoroutineActivity : BaseVBActivity<ActivityCoroutineBinding>() {
          *  onCreate: end
          *  Coroutine 1: DefaultDispatcher-worker-1
          *  Coroutine 2: main
-         *  Coroutine 3: DefaultDispatcher-worker-1
-         *  Coroutine 4: main
          *  协程为非阻塞的
          */
+//        lifecycle.coroutineScope.launch {
+//
+//        }
         Log.d("hello", "onCreate: start")
-
         lifecycleScope.launch {
-
-            //IO线程
-            withContext(Dispatchers.IO) {
-                //IO线程
-                Log.d("hello", "Coroutine 1: " + Thread.currentThread().name)
-
-                //UI线程
-                withContext(Dispatchers.Main) {
-                    Log.d("hello", "Coroutine 2: " + Thread.currentThread().name)
-                }
-
-                //IO线程
-                Log.d("hello", "Coroutine 3: " + Thread.currentThread().name)
-            }
-
-            //UI线程
-            Log.d("hello", "Coroutine 4: " + Thread.currentThread().name)
+            coroutineFunc()
         }
-
         Log.d("hello", "onCreate: end")
     }
+
+    /*
+     * withContext(Dispatchers.IO) 创建了一个指定在 IO 线程池中运行的代码块，该区间内的任何代码都始终通过 IO 线程来执行
+     *
+     */
+    private suspend fun coroutineFunc() {
+        //IO线程
+        withContext(Dispatchers.IO) {
+            //IO线程
+            Log.d("hello", "Coroutine 1: " + Thread.currentThread().name)
+        }
+
+        //UI线程
+        Log.d("hello", "Coroutine 3: " + Thread.currentThread().name)
+    }
+
 }

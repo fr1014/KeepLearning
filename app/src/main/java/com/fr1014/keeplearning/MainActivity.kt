@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.fr1014.coroutine.CoroutineActivity
 import com.fr1014.draw.DrawActivity
 import com.fr1014.keeplearning.databinding.ActivityMainBinding
+import com.fr1014.reboundlayout.ReboundViewActivity
 
 class MainActivity : BaseVBActivity<ActivityMainBinding>() {
 
@@ -17,6 +18,10 @@ class MainActivity : BaseVBActivity<ActivityMainBinding>() {
 
         binding.tvCoroutine.setOnClickListener {
             startActivity(Intent(this, CoroutineActivity::class.java))
+        }
+
+        binding.tvReboundView.setOnClickListener {
+            startActivity(Intent(this, ReboundViewActivity::class.java))
         }
     }
 

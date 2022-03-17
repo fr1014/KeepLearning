@@ -48,11 +48,12 @@
             android:text="协程(Coroutine)" />
 
         <TextView
+            android:id="@+id/tv_rebound_view"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
             android:gravity="center"
             android:background="@color/ffd600"
-            android:text="" />
+            android:text="ReboundView" />
     </LinearLayout>
 </LinearLayout>
