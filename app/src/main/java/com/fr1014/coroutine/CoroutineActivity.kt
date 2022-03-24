@@ -32,6 +32,34 @@ class CoroutineActivity : BaseVBActivity<ActivityCoroutineBinding>() {
             coroutineFunc()
         }
         Log.d("hello", "onCreate: end")
+        binding.code.text = "        /*\n" +
+                "         *  运行结果\n" +
+                "         *  onCreate: start\n" +
+                "         *  onCreate: end\n" +
+                "         *  Coroutine 1: DefaultDispatcher-worker-1\n" +
+                "         *  Coroutine 2: main\n" +
+                "         *  协程为非阻塞的\n" +
+                "         */\n"+
+                "        Log.d(\"hello\", \"onCreate: start\")\n" +
+                "        lifecycleScope.launch {\n" +
+                "            coroutineFunc()\n" +
+                "        }\n" +
+                "        Log.d(\"hello\", \"onCreate: end\")" +
+                "    /*\n" +
+                "     * withContext(Dispatchers.IO) 创建了一个指定在 IO 线程池中运行的代码块，该区间内的任何代码都始终通过 IO 线程来执行\n" +
+                "     *\n" +
+                "     */\n" +
+                "    private suspend fun coroutineFunc() {\n" +
+                "        //IO线程\n" +
+                "        withContext(Dispatchers.IO) {\n" +
+                "            //IO线程\n" +
+                "            Log.d(\"hello\", \"Coroutine 1: \" + Thread.currentThread().name)\n" +
+                "        }\n" +
+                "\n" +
+                "        //UI线程\n" +
+                "        Log.d(\"hello\", \"Coroutine 3: \" + Thread.currentThread().name)\n" +
+                "    }"
+
     }
 
     /*

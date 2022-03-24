@@ -5,10 +5,11 @@ import android.util.Log
 import com.fr1014.extensions.inflate
 import com.fr1014.keeplearning.BaseActivity
 import com.fr1014.keeplearning.databinding.ActivityCoroutineBinding
+import com.fr1014.keeplearning.databinding.ActivityGenericBinding
 
 class GenericActivity : BaseActivity() {
 
-    private val binding by inflate<ActivityCoroutineBinding>()
+    private val binding by inflate<ActivityGenericBinding>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
