@@ -1,27 +1,29 @@
 package com.fr1014.keeplearning
 
-import android.content.Intent
 import android.os.Bundle
-import com.fr1014.coroutine.CoroutineActivity
-import com.fr1014.draw.DrawActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import com.fr1014.keeplearning.databinding.ActivityMainBinding
-import com.fr1014.reboundlayout.ReboundViewActivity
 
 class MainActivity : BaseVBActivity<ActivityMainBinding>() {
+    private val tvContentList = ArrayList<String>()
+
+    init {
+        tvContentList.apply {
+            add("自定义View")
+            add("事件分发")
+            add("协程(Coroutine)")
+            add("ReboundView")
+            add("泛型(Generic)")
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding.tvDraw.setOnClickListener {
-            startActivity(Intent(this, DrawActivity::class.java))
-        }
-
-        binding.tvCoroutine.setOnClickListener {
-            startActivity(Intent(this, CoroutineActivity::class.java))
-        }
-
-        binding.tvReboundView.setOnClickListener {
-            startActivity(Intent(this, ReboundViewActivity::class.java))
+        val mainAdapter = MainAdapter(tvContentList)
+        binding.root.apply {
+            adapter = mainAdapter
+            layoutManager = GridLayoutManager(context, 2)
         }
     }
 

@@ -1,15 +1,15 @@
 package com.fr1014.event
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.fr1014.keeplearning.R
+import com.fr1014.extensions.inflate
+import com.fr1014.keeplearning.BaseActivity
+import com.fr1014.keeplearning.databinding.ActivityEventBinding
 
-class EventActivity : AppCompatActivity() {
+class EventActivity : BaseActivity() {
+    private val binding by inflate<ActivityEventBinding>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_event)
     }
-
 
 }

@@ -10,13 +10,84 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KeepLearning">
+
         <activity
-            android:theme="@style/Transparent"
-            android:name="com.fr1014.reboundlayout.ReboundViewActivity" />
-        <activity android:name="com.fr1014.coroutine.CoroutineActivity" />
-        <activity android:name="com.fr1014.event.EventActivity" />
-        <activity android:name="com.fr1014.draw.DrawActivity" />
-        <activity android:name=".MainActivity">
+            android:name="com.fr1014.generic.GenericActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="@string/app_host"
+                    android:port="5"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.fr1014.reboundlayout.ReboundViewActivity"
+            android:exported="true"
+            android:theme="@style/Transparent">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="@string/app_host"
+                    android:port="4"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fr1014.coroutine.CoroutineActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="@string/app_host"
+                    android:port="3"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fr1014.event.EventActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="@string/app_host"
+                    android:port="2"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.fr1014.draw.DrawActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="@string/app_host"
+                    android:port="1"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

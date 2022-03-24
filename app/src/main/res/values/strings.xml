@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">KeepLearning</string>
+    <string name="app_scheme">keep_learning</string>
+    <string name="app_host">www.fr1014.com</string>
 </resources>

@@ -4,14 +4,14 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
-import com.fr1014.keeplearning.BaseVBActivity
+import com.fr1014.extensions.inflate
+import com.fr1014.keeplearning.BaseActivity
 import com.fr1014.keeplearning.databinding.ActivityReboundViewBinding
 
 
-class ReboundViewActivity : BaseVBActivity<ActivityReboundViewBinding>() {
+class ReboundViewActivity : BaseActivity() {
 
-    override fun getViewBinding() = ActivityReboundViewBinding.inflate(layoutInflater)
-
+    private val binding by inflate<ActivityReboundViewBinding>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
