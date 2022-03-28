@@ -15,6 +15,7 @@ class MainActivity : BaseVBActivity<ActivityMainBinding>() {
             add("ReboundView")
             add("泛型(Generic)")
             add("协程2(Coroutine)")
+            add("WorkManager")
         }
     }
 
