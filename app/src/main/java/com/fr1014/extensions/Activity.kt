@@ -11,3 +11,9 @@ import android.content.Intent
 inline fun <reified T : Activity> Activity.startActivity() {
     startActivity(Intent(this, T::class.java))
 }
+
+inline fun <reified T : Activity> Activity.startActivity(block: Intent.() -> Unit) {
+    val intent = Intent(this, T::class.java)
+    intent.block()
+    startActivity(intent)
+}

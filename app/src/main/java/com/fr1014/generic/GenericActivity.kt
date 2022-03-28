@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.util.Log
 import com.fr1014.extensions.inflate
 import com.fr1014.keeplearning.BaseActivity
-import com.fr1014.keeplearning.databinding.ActivityCoroutineBinding
 import com.fr1014.keeplearning.databinding.ActivityGenericBinding
 
 class GenericActivity : BaseActivity() {

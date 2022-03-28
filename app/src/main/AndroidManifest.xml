@@ -10,7 +10,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KeepLearning">
+        <activity
+            android:name="com.fr1014.coroutine.Coroutine2Activity"
+            android:exported="true" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="@string/app_host"
+                    android:port="6"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.fr1014.generic.GenericActivity"
             android:exported="true"
@@ -21,13 +35,13 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <action android:name="android.intent.action.VIEW" />
+
                 <data
                     android:host="@string/app_host"
                     android:port="5"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.fr1014.reboundlayout.ReboundViewActivity"
             android:exported="true"
@@ -37,6 +51,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <action android:name="android.intent.action.VIEW" />
+
                 <data
                     android:host="@string/app_host"
                     android:port="4"
@@ -53,6 +68,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <action android:name="android.intent.action.VIEW" />
+
                 <data
                     android:host="@string/app_host"
                     android:port="3"
@@ -67,13 +83,13 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <action android:name="android.intent.action.VIEW" />
+
                 <data
                     android:host="@string/app_host"
                     android:port="2"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.fr1014.draw.DrawActivity"
             android:exported="true">
@@ -82,13 +98,13 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <action android:name="android.intent.action.VIEW" />
+
                 <data
                     android:host="@string/app_host"
                     android:port="1"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

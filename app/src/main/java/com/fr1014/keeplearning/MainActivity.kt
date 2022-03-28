@@ -14,6 +14,7 @@ class MainActivity : BaseVBActivity<ActivityMainBinding>() {
             add("协程(Coroutine)")
             add("ReboundView")
             add("泛型(Generic)")
+            add("协程2(Coroutine)")
         }
     }
 
