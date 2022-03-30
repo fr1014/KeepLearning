@@ -16,6 +16,7 @@ class MainActivity : BaseVBActivity<ActivityMainBinding>() {
             add("泛型(Generic)")
             add("协程2(Coroutine)")
             add("WorkManager")
+            add("协程 + LiveData + ViewModel")
         }
     }
 
