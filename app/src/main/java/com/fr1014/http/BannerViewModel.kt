@@ -23,7 +23,6 @@ class BannerViewModel : BaseViewModel() {
     fun getBanner() {
         viewModelScope.launch {
             "getBanner() dispatchers: ${Thread.currentThread().name}".log()
-//            val result = callRequest{handleResponse(WanAndroidApi.bannerApi.getBanner()) }
             val result = callRequest { WanAndroidApi.bannerApi.getBanner() }
             if (result is NetResult.Success) {
                 bannerLiveData.postValue(result.data)
