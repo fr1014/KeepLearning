@@ -1,8 +1,11 @@
 package com.fr1014.http.base
 
 import androidx.lifecycle.ViewModel
+import com.fr1014.extensions.log
 import com.fr1014.http.exception.DealException
 import com.fr1014.http.exception.ResultException
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 /**
  * Create by fanrui07
@@ -15,7 +18,11 @@ open class BaseViewModel : ViewModel() {
         call: suspend () -> BaseModel<T>
     ): NetResult<T> {
         return try {
-            handleResponse(call())
+            withContext(Dispatchers.IO) {
+                "callRequest dispatchers: ${Thread.currentThread().name}".log()
+                val response = call()
+                handleResponse(response)
+            }
         } catch (e: Exception) {
             //这里统一处理异常
             e.printStackTrace()

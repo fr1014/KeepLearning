@@ -3,10 +3,10 @@ package com.fr1014.http
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.fr1014.extensions.log
 import com.fr1014.http.base.BaseViewModel
 import com.fr1014.http.base.NetResult
 import com.fr1014.http.model.Banner
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 /**
@@ -21,8 +21,8 @@ class BannerViewModel : BaseViewModel() {
     }
 
     fun getBanner() {
-        viewModelScope.launch(Dispatchers.IO) {
-            Log.d("hello", "getBanner() dispatchers: ${Thread.currentThread().name}")
+        viewModelScope.launch {
+            "getBanner() dispatchers: ${Thread.currentThread().name}".log()
 //            val result = callRequest{handleResponse(WanAndroidApi.bannerApi.getBanner()) }
             val result = callRequest { WanAndroidApi.bannerApi.getBanner() }
             if (result is NetResult.Success) {
