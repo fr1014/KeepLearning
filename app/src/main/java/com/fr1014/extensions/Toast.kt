@@ -1,6 +1,7 @@
 package com.fr1014.extensions
 
 import android.content.Context
+import android.util.Log
 import android.widget.Toast
 
 /**
@@ -10,4 +11,8 @@ import android.widget.Toast
  */
 fun String.toastShort(context: Context) {
     Toast.makeText(context, this, Toast.LENGTH_SHORT).show()
+}
+
+fun String.log() {
+    Log.d("hello", this)
 }

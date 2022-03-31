@@ -15,13 +15,17 @@ import kotlinx.coroutines.withContext
 open class BaseViewModel : ViewModel() {
 
     suspend fun <T : Any> callRequest(
-        call: suspend () -> BaseModel<T>
+        call: suspend () -> BaseModel<T>,
+        startRequestBlock: (() -> Unit)? = null,
+        successBlock: (() -> Unit)? = null,
+        errorBlock: (() -> Unit)? = null
     ): NetResult<T> {
+        startRequestBlock?.let { it() }
         return try {
             withContext(Dispatchers.IO) {
                 "callRequest dispatchers: ${Thread.currentThread().name}".log()
                 val response = call()
-                handleResponse(response)
+                handleResponse(response, successBlock, errorBlock)
             }
         } catch (e: Exception) {
             //这里统一处理异常
@@ -31,9 +35,12 @@ open class BaseViewModel : ViewModel() {
     }
 
     private fun <T : Any> handleResponse(
-        response: BaseModel<T>
+        response: BaseModel<T>,
+        successBlock: (() -> Unit)? = null,
+        errorBlock: (() -> Unit)? = null
     ): NetResult<T> {
         return if (response.errorCode == -1) {
+            errorBlock?.let { it() }
             NetResult.Error(
                 ResultException(
                     response.errorCode.toString(),
@@ -41,6 +48,7 @@ open class BaseViewModel : ViewModel() {
                 )
             )
         } else {
+            successBlock?.let { it() }
             NetResult.Success(response.data)
         }
     }

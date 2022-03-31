@@ -23,7 +23,11 @@ class BannerViewModel : BaseViewModel() {
     fun getBanner() {
         viewModelScope.launch {
             "getBanner() dispatchers: ${Thread.currentThread().name}".log()
-            val result = callRequest { WanAndroidApi.bannerApi.getBanner() }
+            val result = callRequest(
+                call = { WanAndroidApi.bannerApi.getBanner() },
+                successBlock = { "请求成功".log() },
+                errorBlock = {"请求失败".log()}
+            )
             if (result is NetResult.Success) {
                 bannerLiveData.postValue(result.data)
             } else if (result is NetResult.Error) {
@@ -34,4 +38,18 @@ class BannerViewModel : BaseViewModel() {
             }
         }
     }
+
+//    async和await
+//    async可以支持并发，也可以支持串联通信，此时一般都跟await一起使用
+//    GlobalScope.launch {
+//        val result1 = GlobalScope.async {
+//            getResult1()
+//        }
+//        val result2 = GlobalScope.async {
+//            getResult2()
+//        }
+//        val result = result1.await() + result2.await()
+//        Log.e(TAG,"result = $result")
+//    }
+
 }
