@@ -13,6 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KeepLearning">
         <activity
+            android:name="com.fr1014.fragment.FragmentLearningActivity"
+            android:exported="true" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="@string/app_host"
+                    android:port="10"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.fr1014.flow.FlowActivity"
             android:exported="true">
             <intent-filter>

@@ -18,6 +18,7 @@ class MainActivity : BaseVBActivity<ActivityMainBinding>() {
             add("WorkManager")
             add("协程 + LiveData + ViewModel")
             add("数据流(Flow)")
+            add("Fragment相关")
         }
     }
 
