@@ -1,7 +1,9 @@
-package com.fr1014.keeplearning
+package com.fr1014
 
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
+import com.fr1014.keeplearning.BaseVBActivity
+import com.fr1014.keeplearning.MainAdapter
 import com.fr1014.keeplearning.databinding.ActivityMainBinding
 
 class MainActivity : BaseVBActivity<ActivityMainBinding>() {
@@ -19,6 +21,8 @@ class MainActivity : BaseVBActivity<ActivityMainBinding>() {
             add("协程 + LiveData + ViewModel")
             add("数据流(Flow)")
             add("Fragment相关")
+            add("Recyclerview分组悬停")
+            add("ClipChildren属性")
         }
     }
 
