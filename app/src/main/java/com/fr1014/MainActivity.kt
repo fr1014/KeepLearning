@@ -23,6 +23,7 @@ class MainActivity : BaseVBActivity<ActivityMainBinding>() {
             add("Fragment相关")
             add("Recyclerview分组悬停")
             add("ClipChildren属性")
+            add("Cursor代码验证")
         }
     }
 
