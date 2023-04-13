@@ -23,7 +23,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:path="/web"
+                    android:path="@string/path_activity_web_container"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -38,7 +38,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="14"
+                    android:port="@string/port_activity_web"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -53,7 +53,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="13"
+                    android:port="@string/port_activity_cursor_verify"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -68,7 +68,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="12"
+                    android:port="@string/port_activity_clip_children"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -83,7 +83,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="11"
+                    android:port="@string/port_activity_recyclerview_hover"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -98,7 +98,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="10"
+                    android:port="@string/port_activity_fragment_learning"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -113,7 +113,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="9"
+                    android:port="@string/port_activity_flow"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -128,7 +128,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="8"
+                    android:port="@string/port_activity_http"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -143,7 +143,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="7"
+                    android:port="@string/port_activity_work_manager"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -158,7 +158,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="6"
+                    android:port="@string/port_activity_Coroutine2"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -175,7 +175,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="5"
+                    android:port="@string/port_activity_generic"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -191,7 +191,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="4"
+                    android:port="@string/port_activity_rebound"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -208,7 +208,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="3"
+                    android:port="@string/port_activity_coroutine"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -223,7 +223,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="2"
+                    android:port="@string/port_activity_event"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -238,7 +238,7 @@
 
                 <data
                     android:host="@string/app_host"
-                    android:port="1"
+                    android:port="@string/port_activity_draw"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
@@ -258,7 +258,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <data
                     android:host="@string/app_host"
-                    android:path="/searchWeb"
+                    android:path="@string/path_activity_main"
                     android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>

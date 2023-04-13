@@ -5,6 +5,7 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.fr1014.bean.SchemePortInfo
 import com.fr1014.keeplearning.databinding.ItemContentViewBinding
 
 /**
@@ -12,7 +13,7 @@ import com.fr1014.keeplearning.databinding.ItemContentViewBinding
  * Date: 2022/3/24
  * Describe:
  */
-class MainAdapter(private val tvContentList: ArrayList<String>) :
+class MainAdapter(private val tvContentList: List<SchemePortInfo>) :
     RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
@@ -21,8 +22,9 @@ class MainAdapter(private val tvContentList: ArrayList<String>) :
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
+        val schemePortInfo = tvContentList[position]
         holder.binding.root.apply {
-            text = tvContentList[position]
+            text = schemePortInfo.name
             setBackgroundColor(
                 if (position % 2 == 0)
                     context.getColor(R.color.ffab00)
@@ -33,7 +35,7 @@ class MainAdapter(private val tvContentList: ArrayList<String>) :
                 val intent = Intent()
                 val host = context.getString(R.string.app_host)
                 val scheme = context.getString(R.string.app_scheme);
-                intent.data = Uri.parse("$scheme://$host:${position + 1}")
+                intent.data = Uri.parse("$scheme://$host:${schemePortInfo.port}")
                 context.startActivity(intent)
             }
         }

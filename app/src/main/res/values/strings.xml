@@ -2,4 +2,26 @@
     <string name="app_name">KeepLearning</string>
     <string name="app_scheme">keep_learning</string>
     <string name="app_host">www.fr1014.com</string>
+
+    <!--scheme port-->
+    <string name="port_activity_draw">1</string>
+    <string name="port_activity_event">2</string>
+    <string name="port_activity_coroutine">3</string>
+    <string name="port_activity_rebound">4</string>
+    <string name="port_activity_generic">5</string>
+    <string name="port_activity_Coroutine2">6</string>
+    <string name="port_activity_work_manager">7</string>
+    <string name="port_activity_http">8</string>
+    <string name="port_activity_flow">9</string>
+    <string name="port_activity_fragment_learning">10</string>
+    <string name="port_activity_recyclerview_hover">11</string>
+    <string name="port_activity_clip_children">12</string>
+    <string name="port_activity_cursor_verify">13</string>
+    <string name="port_activity_web">14</string>
+    <!--scheme port-->
+
+    <!--scheme path-->
+    <string name="path_activity_web_container">/web</string>
+    <string name="path_activity_main">/main</string>
+    <!--scheme path-->
 </resources>
