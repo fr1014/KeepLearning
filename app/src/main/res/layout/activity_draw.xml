@@ -8,16 +8,25 @@
     android:orientation="vertical"
     tools:context="com.fr1014.draw.DrawActivity">
 
-    <com.fr1014.draw.CustomView
-        android:layout_width="match_parent"
-        android:layout_height="400dp"/>
+<!--    <com.fr1014.draw.CustomView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
 
     <com.fr1014.draw.CustomImageView
         android:layout_width="220dp"
         android:layout_height="130dp"
-        android:src="@drawable/rock"
         android:scaleType="centerCrop"
+        android:src="@drawable/rock"
+        app:bottom_right="false"
         app:radius="10dp"
-        app:top_right="false"
-        app:bottom_right="false"/>
+        app:top_right="false" />
+
+    <com.fr1014.draw.RoundImageView
+        android:layout_width="220dp"
+        android:layout_height="130dp"
+        android:layout_marginVertical="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rock"
+        app:corner_position="1"
+        app:corner_radius="10dp" />
 </LinearLayout>

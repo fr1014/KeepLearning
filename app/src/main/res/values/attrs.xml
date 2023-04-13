@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CustomImageView">
-        <attr name="top_left" format="boolean"/>
-        <attr name="top_right" format="boolean"/>
-        <attr name="bottom_left" format="boolean"/>
-        <attr name="bottom_right" format="boolean"/>
-        <attr name="radius" format="dimension"/>
+        <attr name="top_left" format="boolean" />
+        <attr name="top_right" format="boolean" />
+        <attr name="bottom_left" format="boolean" />
+        <attr name="bottom_right" format="boolean" />
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="corner_position" format="integer" />
     </declare-styleable>
 </resources>
