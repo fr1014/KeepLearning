@@ -31,7 +31,9 @@ class MainAdapter(private val tvContentList: ArrayList<String>) :
             )
             setOnClickListener {
                 val intent = Intent()
-                intent.data = Uri.parse("keep_learning://www.fr1014.com:${position + 1}")
+                val host = context.getString(R.string.app_host)
+                val scheme = context.getString(R.string.app_scheme);
+                intent.data = Uri.parse("$scheme://$host:${position + 1}")
                 context.startActivity(intent)
             }
         }

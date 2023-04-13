@@ -1,6 +1,7 @@
 package com.fr1014
 
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.GridLayoutManager
 import com.fr1014.keeplearning.BaseVBActivity
 import com.fr1014.keeplearning.MainAdapter
@@ -24,10 +25,12 @@ class MainActivity : BaseVBActivity<ActivityMainBinding>() {
             add("Recyclerview分组悬停")
             add("ClipChildren属性")
             add("Cursor代码验证")
+            add("Scheme携带url为key验证")
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d("hello", "onCreate: $this")
         super.onCreate(savedInstanceState)
 
         val mainAdapter = MainAdapter(tvContentList)

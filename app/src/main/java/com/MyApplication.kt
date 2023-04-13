@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  * Description:
  */
 class MyApplication : Application() {
-    private val checkObserver = CheckObserver()
+    private val checkObserver = CheckObserver(this)
 
     override fun onCreate() {
         super.onCreate()

@@ -13,6 +13,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KeepLearning">
         <activity
+            android:name="com.fr1014.webview.WebHolderActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="@string/app_host"
+                    android:path="/web"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fr1014.webview.WebActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="@string/app_host"
+                    android:port="14"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.fr1014.cursorverify.CursorVerifyActivity"
             android:exported="true">
             <intent-filter>
@@ -221,6 +251,15 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="@string/app_host"
+                    android:path="/searchWeb"
+                    android:scheme="@string/app_scheme" />
             </intent-filter>
         </activity>
     </application>
