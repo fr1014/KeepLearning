@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Path;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 
@@ -47,6 +48,12 @@ public class RoundImageView extends AppCompatImageView {
     }
 
     @Override
+    protected boolean setFrame(int l, int t, int r, int b) {
+        mRectF = new RectF(new Rect(0, 0, r - l, b - t));
+        return super.setFrame(l, t, r, b);
+    }
+
+    @Override
     protected void onDraw(Canvas canvas) {
         if (mRadius > 0) {
             switch (mCornerPosition) {
@@ -81,7 +88,7 @@ public class RoundImageView extends AppCompatImageView {
                     mRadii[7] = 0;
                     break;
             }
-            mRectF.set(0, 0, getWidth(), getHeight());
+//            mRectF.set(0, 0, getWidth(), getHeight());
             mPath.addRoundRect(mRectF, mRadii, Path.Direction.CW);
             //将路径裁剪到ImageView的区域内
             canvas.clipPath(mPath);
