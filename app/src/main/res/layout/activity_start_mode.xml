@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_current_mode"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:background="#03A9F4"-->
+<!--        android:gravity="center"-->
+<!--        android:paddingVertical="10dp"-->
+<!--        android:text="Standard"-->
+<!--        android:textSize="14sp" />-->
+
+    <TextView
+        android:id="@+id/tv_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="启动MainActivity"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="ActivityA 启动模式：Standard"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_single_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="ActivityA 启动模式：SingleTop"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_single_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="ActivityA 启动模式：SingleTask"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_single_instance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="ActivityA 启动模式：SingleInstance"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_b_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFEB3B"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="ActivityB 启动模式：Standard"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_b_single_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFEB3B"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="ActivityB 启动模式：SingleTop"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_b_single_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFEB3B"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="ActivityB 启动模式：SingleTask"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_b_single_instance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFEB3B"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="ActivityB 启动模式：SingleInstance"
+        android:textSize="14sp" />
+</LinearLayout>

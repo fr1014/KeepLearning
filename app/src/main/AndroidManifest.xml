@@ -12,6 +12,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KeepLearning">
+        <activity android:name="com.fr1014.activity.startmode.BStartModeActivity" />
+        <activity android:name="com.fr1014.activity.startmode.AStartModeActivity" />
+        <activity
+            android:name="com.fr1014.activity.AboutActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="@string/app_host"
+                    android:port="@string/port_activity_about"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.fr1014.webview.WebHolderActivity"
             android:exported="true">
@@ -245,8 +262,7 @@
         <activity
             android:name="com.fr1014.MainActivity"
             android:configChanges="orientation|screenSize"
-            android:exported="true"
-            android:launchMode="singleTask">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -255,7 +271,9 @@
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <action android:name="android.intent.action.VIEW" />
+
                 <data
                     android:host="@string/app_host"
                     android:path="@string/path_activity_main"

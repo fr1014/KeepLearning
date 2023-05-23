@@ -18,6 +18,7 @@
     <string name="port_activity_clip_children">12</string>
     <string name="port_activity_cursor_verify">13</string>
     <string name="port_activity_web">14</string>
+    <string name="port_activity_about">15</string>
     <!--scheme port-->
 
     <!--scheme path-->
