@@ -28,6 +28,7 @@ class MainActivity : BaseVBActivity<ActivityMainBinding>() {
             add(SchemePortInfo("ClipChildren属性", getString(R.string.port_activity_clip_children)))
             add(SchemePortInfo("Cursor代码验证", getString(R.string.port_activity_cursor_verify)))
             add(SchemePortInfo("Scheme携带url为key验证", getString(R.string.port_activity_web)))
+            add(SchemePortInfo("支持竖向滑动、横向滑动的控件", getString(R.string.port_activity_scroll_mix)))
             add(SchemePortInfo("Activity相关知识点", getString(R.string.port_activity_about)))
         }
     }

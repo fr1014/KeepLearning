@@ -20,12 +20,15 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17844202898550723" />
         <entry key="app/src/main/res/layout/activity_rebound_view.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/activity_recyclerview_horver.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/activity_scroll_mix.xml" value="0.14361702127659576" />
         <entry key="app/src/main/res/layout/activity_web.xml" value="0.11574074074074074" />
         <entry key="app/src/main/res/layout/activity_web_holder.xml" value="0.14361702127659576" />
         <entry key="app/src/main/res/layout/activity_work_manager.xml" value="0.13177083333333334" />
         <entry key="app/src/main/res/layout/fragment_learning.xml" value="0.17617753623188406" />
         <entry key="app/src/main/res/layout/item_content_view.xml" value="0.17844202898550723" />
+        <entry key="app/src/main/res/layout/item_horizontal.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_hover_common.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/item_vertical.xml" value="0.14361702127659576" />
       </map>
     </option>
   </component>

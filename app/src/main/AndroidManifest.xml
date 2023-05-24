@@ -30,6 +30,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.fr1014.mixscroll.ScrollMixActivity"
+            android:exported="true" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="@string/app_host"
+                    android:port="@string/port_activity_scroll_mix"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.fr1014.webview.WebHolderActivity"
             android:exported="true">
             <intent-filter>
